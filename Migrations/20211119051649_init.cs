@@ -11,7 +11,7 @@ namespace user_test.Migrations
                 columns: table => new
                 {
                     id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     name = table.Column<string>(nullable: true),
                     email = table.Column<string>(nullable: true),
                     password = table.Column<string>(nullable: true)

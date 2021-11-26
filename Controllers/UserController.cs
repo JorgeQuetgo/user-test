@@ -36,6 +36,13 @@ namespace user_test.Controllers
             return BadRequest(errorList);
             //return BadRequest(JsonConvert.SerializeObject(ModelState.Values.Select(e => e.Errors).ToList()));
         }
+
+        
+        [Route("api/users", Name="userRoute-list"), HttpGet]
+        public Task<List<UserModel>> getUsers()
+        {
+            return _userRepository.GetUsers();
+        }
         
     }
 }
